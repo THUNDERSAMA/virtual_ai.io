@@ -68,28 +68,38 @@ function process(rawText) {
 		break;
 		
 		case "what'syourname":
-			response = "My name's jarvis. what's your name?";  break;			
+			response = "My name's jarvis. what's your name?";  break;
+			
 		case "howareyou":
 			response = "I'm good."; break;
+			
 		case "whattimeisit":
 			response = new Date().toLocaleTimeString(); break;
+			
 			case "singasong":
 			response = "The club isn't the best place to find a lover So the bar is where I go Me and my friends at the table doing shots Drinking fast and then we talk slow And you come over and start up a conversation with just me And trust me I will give it a chance now Take my hand, stop, put Van the Man on the jukebox And then we start to dance, and now I am singing like Girl, you know I want your love Your love was handmade for somebody like me Come on now, follow my lead I may be crazy, dont mind me Say, boy, lets not talk too much Grab on my waist and put that body on me Come on now, follow my lead Come, come on now, follow my lead"; break;
+			
 			case "iloveyou":
 			if (localStorage.getItem("name")!=null)
 		{
             response = "I love you too "+ localStorage.getItem("name");
 		}
-		else
-			response = "I love you too";
+		else{
+			response = "I love you too";}
 			break;
-			case "willyoubemyfriend" 
-		if (localStorage.getItem("name")!=null)
+			
+		case "willyoubemyfriend" :
+		if(localStorage.getItem("name")!=null)
 		{
             response = "I will be your friend "+ localStorage.getItem("name");
 		}
-		else
+		else{
 			response = "I will be your friend"; 
+		}break;
+			
+		case "whatisthenameofindianprimeminister":
+			response = "The name of Indian Prime Minister is Narendra Damoder Modi";
+			break;
 		case "stop":
 			response = "Bye!!";
 			toggleBtn();
