@@ -59,7 +59,7 @@ function process(rawText) {
 	let response = null;
 	switch(text) {
 		case "hello":
-		if (localStorage.getItem("name")!=null)
+		if(localStorage.getItem("name")!=null)
 		{
             response = "hi, how are you doing "+ localStorage.getItem("name")+" ?";
 		}
@@ -84,7 +84,7 @@ function process(rawText) {
 			response = "I love you too";
 			break;
 			case "willyoubemyfriend" 
-		if (localStorage.getItem("name")!=null)
+		if(localStorage.getItem("name")!=null)
 		{
             response = "I will be your friend "+ localStorage.getItem("name");
 		}
